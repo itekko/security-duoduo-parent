@@ -1,0 +1,86 @@
+<project xmlns="http://maven.apache.org/POM/4.0.0" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd">
+  <modelVersion>4.0.0</modelVersion>
+  <groupId>com.duoduo</groupId>
+  <artifactId>security-duoduo-parent</artifactId>
+  <version>0.0.1-SNAPSHOT</version>
+  <packaging>pom</packaging>
+
+  <properties>
+    <spring-boot.version>2.1.4.RELEASE</spring-boot.version>
+    <security-duoduo.version>0.0.1-SNAPSHOT</security-duoduo.version>
+  </properties>
+
+  <dependencyManagement>
+    <dependencies>
+      <dependency>
+        <groupId>org.springframework.boot</groupId>
+        <artifactId>spring-boot-dependencies</artifactId>
+        <version>${spring-boot.version}</version>
+        <type>pom</type>
+        <scope>import</scope>
+      </dependency>
+
+        <dependency>
+          <groupId>io.spring.platform</groupId>
+          <artifactId>platform-bom</artifactId>
+          <version>Brussels-SR17</version>
+          <type>pom</type>
+          <scope>import</scope>
+        </dependency>
+
+      <dependency>
+        <groupId>org.springframework.cloud</groupId>
+        <artifactId>spring-cloud-dependencies</artifactId>
+        <version>Greenwich.SR1</version>
+        <type>pom</type>
+        <scope>import</scope>
+      </dependency>
+
+     <!-- <dependency>
+        <groupId>com.duoduo</groupId>
+        <artifactId>security-duoduo-core</artifactId>
+        <version>${security-duoduo.version}</version>
+      </dependency>
+
+      <dependency>
+        <groupId>com.duoduo</groupId>
+        <artifactId>security-duoduo-app</artifactId>
+        <version>${security-duoduo.version}</version>
+      </dependency>
+
+      <dependency>
+        <groupId>com.duoduo</groupId>
+        <artifactId>security-duoduo-browser</artifactId>
+        <version>${security-duoduo.version}</version>
+      </dependency>
+
+      <dependency>
+        <groupId>com.duoduo</groupId>
+        <artifactId>security-duoduo-authorize</artifactId>
+        <version>${security-duoduo.version}</version>
+      </dependency>-->
+    </dependencies>
+  </dependencyManagement>
+  
+  <modules>
+    <!--starters项目-->
+    <module>security-duoduo-spring-boot-starter</module>
+
+    <!--安全核心模块-->
+    <module>security-duoduo-core</module>
+
+    <!--安全app模块-->
+    <module>security-duoduo-app</module>
+
+    <!--安全浏览器模块-->
+    <module>security-duoduo-browser</module>
+
+    <!--安全授权模块-->
+    <module>security-duoduo-authorize</module>
+
+    <!--安全demo模块-->
+    <module>security-duoduo-demo</module>
+
+
+  </modules>
+</project>
