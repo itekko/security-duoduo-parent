@@ -27,11 +27,15 @@ public class BrowserAuthenticationSuccessHandler extends SavedRequestAwareAuthen
 
 	private Logger logger = LoggerFactory.getLogger(getClass());
 
-	private ObjectMapper objectMapper;
+	private ObjectMapper objectMapper = new ObjectMapper();
 
 	private BrowserProperties browserProperties;
 
 	private RequestCache requestCache = new HttpSessionRequestCache();
+
+	public BrowserAuthenticationSuccessHandler(BrowserProperties browserProperties) {
+		this.browserProperties = browserProperties;
+	}
 
 	/**
 	 * @desc 登陆成功逻辑

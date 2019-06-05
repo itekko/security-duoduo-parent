@@ -5,6 +5,7 @@ package com.duoduo.security.core.properties;
 
 import com.duoduo.security.core.constants.SecurityConstants;
 import com.duoduo.security.core.enums.LoginResponseType;
+import org.springframework.boot.context.properties.ConfigurationProperties;
 
 import java.util.List;
 
@@ -14,6 +15,7 @@ import java.util.List;
  * @author zhailiang
  *
  */
+@ConfigurationProperties(prefix = "duoduo.security.browser")
 public class BrowserProperties {
 	
 	/**
@@ -51,6 +53,12 @@ public class BrowserProperties {
 	 * 排除的静态资源
 	 */
 	private List<String> excludeResources;
+
+	/**
+	 * 是否关闭csrf
+	 */
+	private Boolean csrfDisable = Boolean.TRUE;
+
 	
 
 	public String getSignInPage() {
@@ -115,5 +123,13 @@ public class BrowserProperties {
 
 	public void setExcludeResources(List<String> excludeResources) {
 		this.excludeResources = excludeResources;
+	}
+
+	public Boolean getCsrfDisable() {
+		return csrfDisable;
+	}
+
+	public void setCsrfDisable(Boolean csrfDisable) {
+		this.csrfDisable = csrfDisable;
 	}
 }

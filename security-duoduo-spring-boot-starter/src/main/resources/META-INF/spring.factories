@@ -1,2 +1,2 @@
 org.springframework.boot.autoconfigure.EnableAutoConfiguration=\
-com.duoduo.security.autoconfigure.SecurityDuoduoAutoConfiguartion
+com.duoduo.security.browser.config.BrowserSecurityAutoConfiguration

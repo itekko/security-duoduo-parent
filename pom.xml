@@ -8,6 +8,7 @@
   <properties>
     <spring-boot.version>2.1.4.RELEASE</spring-boot.version>
     <security-duoduo.version>0.0.1-SNAPSHOT</security-duoduo.version>
+    <hutool.version>4.5.10</hutool.version>
   </properties>
 
   <dependencyManagement>
@@ -36,29 +37,12 @@
         <scope>import</scope>
       </dependency>
 
-     <!-- <dependency>
-        <groupId>com.duoduo</groupId>
-        <artifactId>security-duoduo-core</artifactId>
-        <version>${security-duoduo.version}</version>
+      <dependency>
+        <groupId>cn.hutool</groupId>
+        <artifactId>hutool-all</artifactId>
+        <version>${hutool.version}</version>
       </dependency>
 
-      <dependency>
-        <groupId>com.duoduo</groupId>
-        <artifactId>security-duoduo-app</artifactId>
-        <version>${security-duoduo.version}</version>
-      </dependency>
-
-      <dependency>
-        <groupId>com.duoduo</groupId>
-        <artifactId>security-duoduo-browser</artifactId>
-        <version>${security-duoduo.version}</version>
-      </dependency>
-
-      <dependency>
-        <groupId>com.duoduo</groupId>
-        <artifactId>security-duoduo-authorize</artifactId>
-        <version>${security-duoduo.version}</version>
-      </dependency>-->
     </dependencies>
   </dependencyManagement>
   
@@ -81,6 +65,20 @@
     <!--安全demo模块-->
     <module>security-duoduo-demo</module>
 
-
   </modules>
+
+  <build>
+    <plugins>
+      <plugin>
+        <groupId>org.apache.maven.plugins</groupId>
+        <artifactId>maven-compiler-plugin</artifactId>
+        <version>2.3.2</version>
+        <configuration>
+          <source>1.8</source>
+          <target>1.8</target>
+          <encoding>UTF-8</encoding>
+        </configuration>
+      </plugin>
+    </plugins>
+  </build>
 </project>

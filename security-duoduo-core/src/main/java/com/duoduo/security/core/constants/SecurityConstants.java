@@ -11,6 +11,11 @@ package com.duoduo.security.core.constants;
 public interface SecurityConstants {
 
 	/**
+	 * 浏览器后缀
+	 */
+	String BROWSER_SUFFIX = ".html";
+
+	/**
 	 * 提示登陆成功提示语
 	 */
 	String DEFAULT_LOGIN_SUCCESS_MSG = "登陆成功";

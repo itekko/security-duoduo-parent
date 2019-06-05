@@ -25,9 +25,13 @@ import java.io.IOException;
 public class BrowserAuthenctiationFailureHandler extends SimpleUrlAuthenticationFailureHandler {
 
 
-	private ObjectMapper objectMapper;
+	private ObjectMapper objectMapper = new ObjectMapper();
 
 	private BrowserProperties browserProperties;
+
+	public BrowserAuthenctiationFailureHandler(BrowserProperties browserProperties){
+		this.browserProperties = browserProperties;
+	}
 
 	/**
 	 * @desc 失败处理逻辑

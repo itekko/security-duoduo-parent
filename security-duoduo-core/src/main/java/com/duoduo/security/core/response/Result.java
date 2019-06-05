@@ -1,6 +1,7 @@
 package com.duoduo.security.core.response;
 
 
+import org.springframework.http.HttpStatus;
 
 /**
  * <pre>
@@ -12,13 +13,13 @@ package com.duoduo.security.core.response;
  */
 public class Result<T> {
 
-    public final static Integer CODE_SUCCESS = 0;
-    public final static Integer CODE_FAIL = 1;
+    public final static Integer CODE_SUCCESS = HttpStatus.OK.value();
+    public final static Integer CODE_FAIL = HttpStatus.BAD_REQUEST.value();
     public final static String MSG_SUCCESS = "操作成功";
     public final static String MSG_FAIL = "操作失败";
 
     /**
-     * 响应业务状态",example = "0 成功"
+     * 响应业务状态",example = "200 成功"
      */
     private Integer code;
 
@@ -76,4 +77,27 @@ public class Result<T> {
         this.data = data;
     }
 
+    public Integer getCode() {
+        return code;
+    }
+
+    public void setCode(Integer code) {
+        this.code = code;
+    }
+
+    public String getMsg() {
+        return msg;
+    }
+
+    public void setMsg(String msg) {
+        this.msg = msg;
+    }
+
+    public T getData() {
+        return data;
+    }
+
+    public void setData(T data) {
+        this.data = data;
+    }
 }

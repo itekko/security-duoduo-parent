@@ -13,9 +13,6 @@
 
     <artifactId>security-duoduo-spring-boot-starter</artifactId>
 
-    <properties>
-        <main.basedir>${basedir}/../..</main.basedir>
-    </properties>
 
     <dependencies>
 
@@ -23,6 +20,12 @@
         <dependency>
             <groupId>org.springframework.boot</groupId>
             <artifactId>spring-boot-autoconfigure</artifactId>
+        </dependency>
+
+        <dependency>
+            <groupId>com.duoduo</groupId>
+            <artifactId>security-duoduo-browser</artifactId>
+            <version>${security-duoduo.version}</version>
         </dependency>
 
 
